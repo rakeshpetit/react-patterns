@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import AppDup from "./AppDup3";
+import AppDup from "./AppDup4";
 
 class App extends Component {
   render() {
