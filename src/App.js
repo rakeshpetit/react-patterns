@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Toggle from "./components/Toggle1";
+import AppDup from "./AppDup3";
 
 class App extends Component {
   render() {
@@ -13,10 +13,8 @@ class App extends Component {
     };
 
     return (
-      <div style={divStyle}>
-        <Toggle 
-        onToggle={on => console.log('toggle',on)}
-        />
+      <div style={divStyle}>        
+        <AppDup />
       </div>
     );
   }
