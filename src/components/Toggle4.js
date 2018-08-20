@@ -17,18 +17,24 @@ export function withToggle(Component) {
       return Wrapper;
 }
 
-const ToggleOn = withToggle(({ children, on }) => {
+const ToggleOn = withToggle((props) => {
+  console.log('ToggleOn', props);    
+  const { on, children }  = props;
   return on ? children : null;
 })
 
-const ToggleOff = withToggle(({ children, on }) => {
+const ToggleOff = withToggle((props) => {
+    console.log('ToggleOff', props);    
+    const { on, children }  = props;
   return on ? null : children;
 })
 
-const ToggleButton = withToggle(({on, toggle, ...props}) => {
+const ToggleButton = withToggle((props) => {
+    console.log('ToggleButton', props); 
+    const {on, toggle, ...otherProps} = props;
     return (
       <div onClick={toggle}>
-        <Switch on={on} {...props} />
+        <Switch on={on} {...otherProps} />
       </div>
     );
   })
